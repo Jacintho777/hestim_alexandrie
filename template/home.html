@@ -1,0 +1,101 @@
+{% extends 'rapports.html' %}
+
+{% block content %}
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+  	<br><br>
+    <h1 class="display-4">Upload your files</h1>
+    <br>
+    <br>
+    <form class = "d" action = "{{url_for('rapports')}}" method="POST", enctype="multipart/form-data">
+
+    	{{   form.hidden_tag()    }}
+    <div class = "choose_file">
+    	<input id="file" name="file" type="file" value = "">
+    	<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" fill="currentColor" class="bi bi-cloud-arrow-up-fill" viewBox="0 0 16 16">
+  <path d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2zm2.354 5.146a.5.5 0 0 1-.708.708L8.5 6.707V10.5a.5.5 0 0 1-1 0V6.707L6.354 7.854a.5.5 0 1 1-.708-.708l2-2a.5.5 0 0 1 .708 0l2 2z"/>
+</svg>
+    </div>
+    <style type="text/css">
+	.choose_file {
+	margin-left: 22em;
+    position: relative;
+}
+.choose_file input {
+    width: 50em;
+}
+.choose_file svg {
+	margin-left: -25em;
+	margin-top: -25em;
+	margin-right: 10em;
+    
+}
+</style>
+<br><br><br>
+    	{{   form.submit(class="btn btn-primary")   }}
+    	
+    </form>
+    <br><br>
+	 <table class="table">
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+  	{% for report in reports %}
+    <tr>
+      <th scope="row" >
+      	<img class = "my_doc" src="{{url_for('send_image', image_name = report[0][:-3]+'png')}}">
+
+</div>
+<style type="text/css">
+.my_doc {
+	width: 150px;
+	height: 200px;
+}
+.download_button svg {
+	margin-left: -2.35em;
+	margin-top: -2em;
+    
+}
+</style>
+    	<!-- {{  form.download() }} -->
+    	
+    
+      	<!-- <button class = "btn btn-primary"  action= "{{url_for('download', id = reports.index(report)+1)}}" method = 'GET' , enctype="multipart/form-data">
+    		{{reports.index(report)}}
+    	</button> -->
+    	</th>
+      <td>{{report[0]}}</td>
+      <td><form class = "d" action = "{{url_for('download',id = reports.index(report))}}" method="GET", enctype="multipart/form-data">
+      	<div class = "download_button">
+      	<input id="download" name="download" type="submit" value="">
+      	<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cloud-arrow-down-fill" viewBox="0 0 16 16">
+  <path d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2zm2.354 6.854-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 9.293V5.5a.5.5 0 0 1 1 0v3.793l1.146-1.147a.5.5 0 0 1 .708.708z"/>
+</svg></form></td>
+	<style type="text/css">
+		.download_button {
+		    position: relative;
+		}
+		.download_button input {
+			width: 50px;
+		}
+	</style>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+<style type="text/css">
+	.table{
+		margin-left: -5em;
+	}
+</style>
+
+</div>
+</div>
+
+{% endblock %}
+

@@ -1,0 +1,282 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<!-- S'occuper de l'organisation des autres pages
+		Finaliser les éléments de la page d'acceuil
+		Tester les programmes d'upload et de download via des Tutos
+		Tester la balise aside -->
+
+		<!-- Faire des sections dans la page d'accueil comprenant les onglets disponibles dans le menu et les différents départements du labo qui seront abordés en plus d'un mot d'une personnalité de l'école -->
+		
+		<title>Hestim Alexandrie</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<!-- <link rel="stylesheet" href="assets/css/main.css" /> -->
+		<link rel= "stylesheet" href= "{{ url_for('static',filename='assets/css/main.css') }}">
+		<noscript><link rel= "stylesheet" href= "{{ url_for('static',filename='assets/css/noscript.css') }}">
+		<!-- <link rel="stylesheet" href="assets/css/noscript.css" /> -->
+		</noscript>
+	</head>
+	<body class="is-preload">
+	</span>
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a  class="logo">
+									<span class="symbol" ><img src="static/images/logo (2).svg" alt="" /></span><span class="title"><br>Un oasis du savoir pratique et du fruit de la recherche à l'école HESTIM<br></span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+					<br>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="">Accueil</a></li>
+							<li><a href="espace_didactique">Espace didactique</a></li>
+							<li><a href="espace_informatif">Almanach des équipements</a></li>
+							<li><a href="rapports">Rapports Archives</a></li>
+							<li><a href="nouveautes">Nouveautés</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<header>
+								<h1 style = "border: 1px solid black;"><em>"Bienvenue sur Hestim Alexandrie. Explorez les descriptions des équipements dernier cri du laboratoire Hestim, des tutoriels en réalisation des TP, des exemples de comptes-rendus entièrement rédigés, mais aussi tous les rapports de projets rédigés par les brillants étudiants des promotions qui ont précédé la vôtre. Partagez votre travail pour enrichir la plateforme et faites-le apprécier par toute la communauté Hestimienne."</em></h1>
+								<br>
+								<div class = 'line'> <br></div>
+							</header>
+							<div class = 'section_1'><h2><br><br>Faites le tour des onglets</h2></div>
+							<section class="tiles">
+								<article class="style1">
+									<span class="image">
+										<img src="static/images/head2.jpg" />
+									</span>
+									<a href="espace_didactique">
+										<h2>Espace didactique</h2>
+										<div class="content">
+											<p>Revivez vos TP où que vous soyez</p>
+										</div>
+									</a>
+								</article>
+								<article class="style2">
+									<span class="image">
+										<img src="static/images/head3.jpg" alt="" />
+									</span>
+									<a href="rapports">
+										<h2>Rapports et archives</h2>
+										<div class="content">
+											<p>Relisez et apprécier les documents rédigés par vos pairs à Hestim. Uploadez les vôtres et faites les apprécier à votre tour.</p>
+										</div>
+									</a>
+								</article>
+								<article class="style3">
+									<span class="image">
+										<img class = "temp" src="static/images/head1.jpg" alt="" />
+										<style type="text/css">
+											.temp{
+												height: 242px;
+											}
+										</style>
+									</span>
+									<a href="nouveautes">
+										<h2>Nouveautés</h2>
+										<div class="content">
+											<p>Soyez informés des dernières nouveautés et dispositions prises au laboratoire Hestim</p>
+										</div>
+									</a>
+								</article>
+								<div class = 'section_2'><h2><br><br>Divers départements à explorer</h2></div>
+								<article class="style4">
+									<span class="image">
+										<img src="static/images/chimie.jpg" alt="" />
+									</span>
+									<a href="espace_didactique">
+										<h2>Laboratoire Chimie</h2>
+										<div class="content">
+											<p>"Rien ne se perd,rien ne se crée, tout se transforme"</p>
+										</div>
+									</a>
+								</article>
+								<article class="style5">
+									<span class="image">
+										<img src="static/images/electronique.jpg" alt="" />
+									</span>
+									<a href="espace_didactique#Electricite">
+										<h2>Laboratoire Electronique</h2>
+										<div class="content">
+											<p>"U = RI"</p>
+										</div>
+									</a>
+								</article>
+								<article class="style6">
+									<span class="image">
+										<img src="static/images/genie_civil.jpg" alt="" />
+									</span>
+									<a href="espace_didactique">
+										<h2>Laboratoire Génie-Civil</h2>
+										<div class="content">
+											<p>"Outils, calculs et mains"</p>
+										</div>
+									</a>
+								</article>
+								<article class="style2">
+									<span class="image">
+										<img src="static/images/SFC.jpg" alt="" />
+									</span>
+									<a href="espace_didactique">
+										<h2>Smart Factory Connected</h2>
+										<div class="content">
+											<p>Une mini-usine pour l'immersion dans le milieu industriel</p>
+										</div>
+									</a>
+								</article>
+								<article class="style3">
+									<span class="image">
+										<img src="static/images/mecanique_hydraulique_pneumatique.jpg" alt="" />
+									</span>
+									<a href="espace_didactique#Mecanique">
+										<h2>Laboratoire d'hydraulique-mécanique-pneumatique</h2>
+										<div class="content">
+											<p>"L'ingénierie est la chose la plus proche de la magie au monde"</p>
+										</div>
+									</a>
+								</article>
+								<article class="style1">
+									<span class="image">
+										<img src="static/images/electrotechnique.jpg" alt="" />
+									</span>
+									<a href="espace_didactique#Electricite">
+										<h2>Laboratoire Electrotechnique</h2>
+										<div class="content">
+											<p>"P = UICos(phi)"</p>
+										</div>
+									</a>
+								</article>
+								<article class="style6">
+									<!-- <span class="image">
+										<img src="static/images/head2.jpg" alt="" />
+									</span>
+									<a href="generic.html">
+										<h2>Dictum</h2>
+										<div class="content">
+											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+										</div>
+						 		</a> -->
+						 		</article>
+								<article class="style5">
+									<span class="image">
+										<img src="static/images/usinage.jpg" alt="" />
+									</span>
+									<a href="espace_didactique#Usinage">
+										<h2>Usinage</h2>
+										<div class="content">
+											<p>Apprenez à mettre en forme les pièces de vos réalisations</p>
+										</div>
+									</a>
+								</article>
+
+								<!-- <article class="style4">
+									<span class="image">
+										<img src="static/images/head3.jpg" alt="" />
+									</span>
+									<a href="generic.html">
+										<h2>Pretium</h2>
+										<div class="content">
+											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+										</div>
+									</a>
+								</article> -->
+
+							</section>
+							<section>
+								<div class = 'section_3'><h2><br><br>Homme scientifique du mois</h2></div><br>
+								<div class = "scientist">
+									<div class = "man"><img src="static/images/isaac_newton.jpg"></div>
+									<div class = "work"><h3>Isaac Newton (1642-1727)</h3><a>Auteur du principe fondamental de la dynamique (en abréviation, PFD) qui désigne une loi de physique mettant en relation la masse d'un objet, et l'accélération qu'il reçoit si des forces lui sont appliquées. On l'appelle aussi deuxième loi de Newton, ou relation fondamentale de la dynamique, ou encore RFD. Son énoncé est le suivant : "Dans un référentiel galiléen, l'accélération du centre d'inertie d'un système de masse m constante est proportionnelle à la résultante des forces qu'il subit, et inversement proportionnelle à m" :<p></p><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/06b331d21ad39af818435ec6ac2767244481933e" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -1.338ex; width:12.428ex; height:3.843ex;" alt="\sum{\vec{\mathrm{F}}_i} = m \vec{a}"></div>
+									<style type="text/css">
+										.work {
+
+											font-family: Arial; 
+											color: solid black;
+
+										}
+									</style>
+								</div>
+								<style type="text/css">
+									.scientist{
+										border: 2px solid rgb(33, 32, 156);
+										padding: 3.5em;
+										padding-right: 4.5em;
+										padding-left: 5.5em;
+										background: rgb(241, 241, 241);
+									}
+								</style>
+							</section>
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<section class = 'hearing'>
+								<h2>Nous sommes à votre écoute</h2>
+								<form method="post" action="/form">
+									<div class="fields">
+										<div class="field half">
+											<input type="text" name="name" id="name" placeholder="Nom" />
+										</div>
+										<div class="field half">
+											<input type="email" name="email" id="email" placeholder="Email" />
+										</div>
+										<div class="field">
+											<textarea name="message" id="message" placeholder="Message"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" onClick = "printing" value="Envoyer" class="primary" /></li>
+									</ul>
+								</form>
+							</section>
+							<section class = "follow">
+								<h2>Suivez-nous</h2>
+								<ul class="icons">
+									<li><a href="https://twitter.com/hestimofficiel" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="https://web.facebook.com/Hestim.Officiel/?_rdc=1&_rdr" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="https://www.instagram.com/accounts/login/?next=/hestimofficiel/" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
+								</ul>
+							</section>
+							</style>
+							<ul class="copyright">
+								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src= "static/assets/js/jquery.min.js"></script>
+			<script src= "static/assets/js/browser.min.js"></script>
+			<script src= "static/assets/js/breakpoints.min.js"></script>
+			<script src= "static/assets/js/util.js"></script>
+			<script src= "static/assets/js/main.js" ></script>
+	</body>
+</html>

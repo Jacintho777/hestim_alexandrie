@@ -1,0 +1,306 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Hestim Alexandrie/Rapports archivés</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<!-- ###################################### -->
+		
+		<!-- ###################################### -->
+		<link rel= "stylesheet" href= "{{ url_for('static',filename='assets/css/main.css') }}">
+		<noscript><link rel= "stylesheet" href= "{{ url_for('static',filename='assets/css/noscript.css') }}"></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="symbol" ><img src="{{ url_for('static',filename='/images/logo (1).svg')}}" alt="" /></span><span class="title"><br>Un oasis du savoir pratique et du fruit de la recherche à l'école HESTIM</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header><br>
+					<form action = "/" method = "GET" class="d-flex">
+			        <input name="research" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+			        <style type="text/css">
+			        	.form-control {
+						    width: 30em;
+						}
+
+						.me-2 {
+						    margin-right: .5rem;
+						}
+						.form-control {
+						    display: block;
+						    width: 100%;
+						    height: 55px;
+						    padding: .375rem .75rem;
+						    font-size: 1rem;
+						    font-weight: 400;
+						    line-height: 1.5;
+						    color: #212529;
+						    background-color: #fff;
+						    background-clip: padding-box;
+						    border: 1px solid #ced4da;
+						    -webkit-appearance: none;
+						    -moz-appearance: none;
+						    appearance: none;
+						    border-radius: .25rem;
+						    transition: border-color .15s
+			        </style>
+			        <button class="btn btn-info" type="submit"><svg xmlns="http://www.w3.org/2000/svg" style = "margin-left: 0em;" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16" >
+  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+</svg></button>
+<style type="text/css">
+.btn {
+    width: 60px;
+}
+.btn-info {
+    background-color: #0dcaf0;
+    border-color: #0dcaf0;
+}
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    background-color: #0dcaf0;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    border-radius: .25rem;
+    transition: color .15s
+</style>
+ <br><br>
+			      	</form>
+			      	<style type="text/css">
+			      		.btn{
+			      			width: 60px;
+			      		}
+			      		.form-control {
+			      			width: 30em;
+			      		}
+			      		.d-flex{
+			      			display: flex;
+			      			margin-left: 50em;
+			      		}
+			      	</style>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index">Accueil</a></li>
+							<li><a href="espace_didactique">Espace didactique</a></li>
+							<li><a href="espace_informatif">Almanach des équipements</a></li>
+							<li><a href="rapports">Rapports Archivés</a></li>
+							<li><a href="nouveautes">Nouveautés</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1 class = "title1">Téléversez ou téléchargez un rapport de projet</h1>
+							<br>
+							<style type="text/css">
+								.title1{
+									font-family: Arial;
+									font-size: 25px;
+									border: 1px solid black;
+								}
+							</style>
+						
+								 <table class="table">
+							  <thead>
+							    <tr>
+							      <th scope="col"></th>
+							      <th scope="col"></th>
+							    </tr>
+							  </thead>
+							  <tbody>
+							  	{% for report in reports %}
+							    <tr>
+							      <th scope="row" class = "image_area" >
+							      	<a href = "{{url_for('display', d_file = report[0])}}"><img class = "my_doc" src="{{url_for('send_image', image_name = report[0][:-3]+'png')}}"></a>
+
+							</div>
+							<style type="text/css">
+							.my_doc {
+								width: 150px;
+								height: 200px;
+							}
+							.download_button svg {
+								margin-left: -2.35em;
+								margin-top: -2em;
+							    
+							}
+							</style>
+							    	</th>
+							    	<style type="text/css">
+							    		.image_area{
+							    			width : 200px;
+							    			height: 150px;
+							    			text-align: center;
+							    		}
+							    	</style>
+							      <td class = "docname"><div style="color: black; font-family: Lucida Handwriting, Times, serif;">{{report[0][:-4]}}</div>							      	
+							      	<div class = 'rating-css'>
+							      		<div class = "star-icon">
+							      			<div>
+							      				
+							      				{% for star in range(stars[reports.index(report)]) %}
+
+							      				<i class="fa fa-star" aria-hidden="true"></i>
+
+							      				{% endfor %}
+
+							      			</div>
+							      		</div>
+							      	</div>
+							      	<style type="text/css">
+							      		.rating-css div {
+							      			color: #ffe400;
+							      			margin-right: 0.7em;
+							      		}
+							      	</style>
+							      </td>
+							      <style type="text/css">
+							      	.docname{
+							      		width : 45em;
+							      		padding-bottom: 3em;
+							      		vertical-align: middle;
+							      		padding-left: -10em;
+							      		font-family: Arial;
+							      		font-size: 18px;
+							      		text-align: center;
+							      	}
+							      	.docname div{
+							      		margin-left: 0.65em;
+							      		padding-top: 1em;
+							      	}
+							      </style>
+							      <td class = "download_area"><form class = "d" action = "{{url_for('download',id = reports.index(report))}}" method="GET", enctype="multipart/form-data">
+							      	<div class = "download_button">
+							      	<input style = "width: 50px;" id="download" name="download" type="submit" value="">
+							      	<svg style = "width: 30px; height: 50px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cloud-arrow-down-fill" viewBox="0 0 16 16">
+							  <path style = "width: 30px; height: 50px;" d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2zm2.354 6.854-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 9.293V5.5a.5.5 0 0 1 1 0v3.793l1.146-1.147a.5.5 0 0 1 .708.708z"/>
+							</svg><style type="text/css">
+									.download_button {
+									    position: relative;
+									}
+									
+									
+									.bi {
+										margin-top: 0em;
+										margin-left: 2em;
+									}
+								</style></div>
+						</form></td>
+							<style type="text/css">
+								.download_area{
+									vertical-align: middle;
+								}
+							</style>
+								
+							    </tr>
+							    {% endfor %}
+							  </tbody>
+							</table>
+							<style type="text/css">
+								.table{
+									margin-left: 0em;
+									background: linear-gradient(rgb(140, 153, 154), rgb(140, 153, 154))
+								}
+							</style>
+
+							</div>
+							</div>
+							   
+						<style type="text/css">
+							.container{
+								text-align : center;
+								padding: 10px;	
+							}
+						</style>
+							
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer class = "my_foot" id="footer">
+						<div class="inner">
+							<section>
+								<h2>Nous sommes à votre écoute</h2>
+								<form method="post" action="#">
+									<div class="fields">
+										<div class="field half">
+											<input type="text" name="name" id="name" placeholder="Nom" />
+										</div>
+										<div class="field half">
+											<input type="email" name="email" id="email" placeholder="Email" />
+										</div>
+										<div class="field">
+											<textarea name="message" id="message" placeholder="Message"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Envoyer" class="primary" /></li>
+									</ul>
+								</form>
+							</section>
+							<section>
+								<h2>Suivez-nous</h2>
+								<ul class="icons">
+									<li><a href="https://twitter.com/hestimofficiel" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="https://web.facebook.com/Hestim.Officiel/?_rdc=1&_rdr" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="https://www.instagram.com/accounts/login/?next=/hestimofficiel/" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
+							</section>
+							<ul class="copyright">
+								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+						<style type="text/css">
+						.my_foot .inner{
+							margin-left: 10em;
+
+						}
+					</style>
+					</footer>
+					
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="{{ url_for('static',filename='assets/js/jquery.min.js') }}"></script>
+			<script src="{{ url_for('static',filename='assets/js/browser.min.js') }}"></script>
+			<script src="{{ url_for('static',filename='assets/js/breakpoints.min.js') }}"></script>
+			<script src="{{ url_for('static',filename='assets/js/util.js') }}"></script>
+			<script src="{{ url_for('static',filename='assets/js/main.js') }}"></script>
+
+	</body>
+</html>
